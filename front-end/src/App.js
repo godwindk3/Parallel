@@ -9,8 +9,14 @@ import CenterPanel from './views/CenterPanel.js';
 import RightPanel from './views/RightPanel.js';
 import { SharedDataProvider } from './views/SharedDataContext.js';
 import ImageComponent from './ImageComponent.js';
-
+import React, { useState } from 'react';
 function App() {
+  const [dataChanged, setDataChanged] = useState(false);
+
+  const handleDataChange = () => {
+    // Toggle dataChanged to trigger a re-fetch in ImageComponent
+    setDataChanged((prev) => !prev);
+  }
   return (
     <div className="App">
       <Header />

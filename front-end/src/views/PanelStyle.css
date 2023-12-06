@@ -1,0 +1,36 @@
+/* styles.css (or include these styles in your component files) */
+
+.panel {
+    border: 1px solid hsl(0, 0%, 80%);
+    padding: 10px;
+    margin: 5px;
+    
+    background-color: #f2f2f215; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* Set the width */
+    height: 400px;
+  }
+  
+  .left-panel {
+    flex: 1;
+    background-color: #98ddfb; /* Example background color for Left Panel */
+  }
+  
+  .center-panel {
+    flex: 1;
+    background-color: #98ddfb; /* Example background color for Center Panel */
+  }
+  
+  .right-panel {
+    flex: 1;
+    background-color: #98ddfb; /* Example background color for Right Panel */
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

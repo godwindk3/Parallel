@@ -1,4 +1,12 @@
 # Simple MPR
+Backend
+requirement 
+-fastapi
+-numpy
+-Pillow
+-pydicom
+-uvicorn
+-python-dotenv
 Simple MPR <br/>
 --- How to run
   1. Paste the path to dicom files in the .env file in backend folder
@@ -8,4 +16,6 @@ Simple MPR <br/>
   5. fastApi install
   6. in front-end folder use npm start
   7. in backend folder use uvicorn main:app --reload
+  8. ***Set Up:
+
      

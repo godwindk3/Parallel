@@ -257,3 +257,14 @@ input, textarea, select{
 .translate-effect:hover{
   transform: translateY(-20px);
 }
+/* App.css */
+
+.app-container {
+  display: flex;
+  justify-content: space-between; 
+  padding: 20px; 
+  flex: 1;
+  background-color: var(--clr-dark);
+  height: 100vh;
+}
+

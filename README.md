@@ -16,7 +16,6 @@ Simple MPR <br/>
   5. fastApi install
   6. in front-end folder use npm start
   7. in backend folder use uvicorn main:app --reload
-  8. ***Set Up:
 ## How to use 
 After the user interface show up, you can interact with three components 
 

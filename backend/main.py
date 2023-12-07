@@ -16,7 +16,7 @@ PORT = int(os.getenv("PORT"))
 def hello_world():
     return "Hello World"
 
-@app.get("/test_image")
+@app.get("/image")
 async def get_image_test():
     file_path = os.path.join("data", "PAT034", "D0001.dcm")
     img_array  = pydicom.dcmread(f"{file_path}").pixel_array.astype(float)

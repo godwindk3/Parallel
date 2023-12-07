@@ -9,7 +9,7 @@ const Header = () => {
         <Navbar />
         <div className='container'>
             <div className='header-content text-center flex flex-column'>
-                <h1 className='text-uppercase header-title'>NHOM 5</h1>
+                <h1 className='text-uppercase header-title'>NHÓM 5</h1>
                 <p className='text-lead'>Xoay ảnh MPR</p>
                 <a href = "/" className='btn header-btn btn-blue'>
                     <FaPaperPlane /> <span></span>

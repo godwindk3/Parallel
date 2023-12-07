@@ -8,8 +8,12 @@ import LeftPanel from './views/LeftPanel.js';
 import CenterPanel from './views/CenterPanel.js';
 import RightPanel from './views/RightPanel.js';
 import { SharedDataProvider } from './views/SharedDataContext.js';
-import ImageComponent from './ImageComponent.js';
+import ImageComponent from './mprComponents/ImageComponent.js';
 import React, { useState } from 'react';
+import ImageFetcher from './mprComponents/ImageFetcher.js';
+import AxialImageFetcher from './mprComponents/AxialImageFetcher.js';
+import SagittalImageFetcher from './mprComponents/SagittalImageFetcher.js';
+
 function App() {
   const [dataChanged, setDataChanged] = useState(false);
 
@@ -22,8 +26,14 @@ function App() {
       <Header />
       <About />
       <Portfolio />
-      <ImageComponent />
+      {/* <ImageComponent /> */}
+      <div className='app-container'>
+      <ImageFetcher />
+      <AxialImageFetcher />
+      <SagittalImageFetcher />
+      </div>
       <Footer />
+      
       {/* <SharedDataProvider>
         <div style={{ display: 'flex' }}>
           <LeftPanel />

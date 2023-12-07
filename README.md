@@ -1,4 +1,5 @@
 # Simple MPR
+## How to set up
 Backend
 requirement 
 -fastapi
@@ -17,5 +18,7 @@ Simple MPR <br/>
   6. in front-end folder use npm start
   7. in backend folder use uvicorn main:app --reload
   8. ***Set Up:
+## How to use 
+
 
      

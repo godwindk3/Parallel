@@ -17,7 +17,6 @@ class MPR:
         self.data = load_dicoms(path)
         self.images = self.load_images(self.data)
         self.size = self.images.shape
-        print(self.images.shape)
 
     def load_images(self, dicoms):
         volume_data = np.stack(

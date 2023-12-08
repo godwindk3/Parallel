@@ -86,24 +86,88 @@
 
 // export default AxialImageFetcher;
 
-import React, { useState, useEffect, useRef } from 'react';
+// import React, { useState, useEffect, useRef } from 'react';
 
-const AxialImageFetcher = () => {
-  const middleValue = 94; // Middle value for the range input (assuming the middle is around 94 for 0-188)
+// const AxialImageFetcher = () => {
+//   const middleValue = 94; // Middle value for the range input (assuming the middle is around 94 for 0-188)
+//   const [zCoordinate, setZCoordinate] = useState(middleValue);
+//   const [imageSrc, setImageSrc] = useState('');
+//   const containerRef = useRef(null);
+
+//   useEffect(() => {
+//     // Fetch initial image
+//     fetchImage(zCoordinate);
+
+//     // Scroll to the middle position when the component mounts
+//     if (containerRef.current) {
+//       const middleScrollPosition = (containerRef.current.scrollWidth - containerRef.current.clientWidth) / 2;
+//       containerRef.current.scrollLeft = middleScrollPosition;
+//     }
+//   }, [zCoordinate]);
+
+//   const fetchImage = async (coordinate) => {
+//     try {
+//       const response = await fetch(`/axial/${coordinate}`);
+//       if (response.ok) {
+//         const blob = await response.blob();
+//         const imageUrl = URL.createObjectURL(blob);
+//         setImageSrc(imageUrl);
+//       } else {
+//         console.error('Failed to fetch image:', response.statusText);
+//       }
+//     } catch (error) {
+//       console.error('Error:', error);
+//     }
+//   };
+
+//   const handleRangeChange = (e) => {
+//     const newCoordinate = parseInt(e.target.value, 10);
+//     setZCoordinate(newCoordinate);
+//   };
+
+//   return (
+//     <div className="axial-fet-container">
+//       <div className="axial-fet-input-container">
+//         <label className='info-colour'>
+//           Adjust Axial (0-188):
+//           <input
+//             type="range"
+//             min="0"
+//             max="188"
+//             value={zCoordinate}
+//             onChange={handleRangeChange}
+//             step="1"
+//           />
+//           {zCoordinate}
+//         </label>
+//       </div>
+
+//       <div
+//         className="scroll-container"
+//         ref={containerRef}
+//         onScroll={() => console.log('Scrolling...')} // Add your scroll handling logic here
+//         style={{ overflowX: 'auto', width: '100%', maxWidth: '400px', height: '500px', whiteSpace: 'nowrap' }}
+//       >
+//         {imageSrc && <img src={imageSrc} alt="Axial Image" className="square-image" />}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default AxialImageFetcher;
+
+// AxialImageFetcher.js
+import React, { useState, useEffect } from 'react';
+
+const AxialImageFetcher = ({ dataChanged }) => {
+  const middleValue = 94;
   const [zCoordinate, setZCoordinate] = useState(middleValue);
   const [imageSrc, setImageSrc] = useState('');
-  const containerRef = useRef(null);
 
   useEffect(() => {
-    // Fetch initial image
+    // Fetch image when zCoordinate or dataChanged changes
     fetchImage(zCoordinate);
-
-    // Scroll to the middle position when the component mounts
-    if (containerRef.current) {
-      const middleScrollPosition = (containerRef.current.scrollWidth - containerRef.current.clientWidth) / 2;
-      containerRef.current.scrollLeft = middleScrollPosition;
-    }
-  }, [zCoordinate]);
+  }, [zCoordinate, dataChanged]);
 
   const fetchImage = async (coordinate) => {
     try {
@@ -129,11 +193,11 @@ const AxialImageFetcher = () => {
     <div className="axial-fet-container">
       <div className="axial-fet-input-container">
         <label className='info-colour'>
-          Adjust Axial (0-188):
+          <p>Adjust Axial (0-280):</p>
           <input
             type="range"
             min="0"
-            max="188"
+            max="280"
             value={zCoordinate}
             onChange={handleRangeChange}
             step="1"
@@ -144,8 +208,6 @@ const AxialImageFetcher = () => {
 
       <div
         className="scroll-container"
-        ref={containerRef}
-        onScroll={() => console.log('Scrolling...')} // Add your scroll handling logic here
         style={{ overflowX: 'auto', width: '100%', maxWidth: '400px', height: '500px', whiteSpace: 'nowrap' }}
       >
         {imageSrc && <img src={imageSrc} alt="Axial Image" className="square-image" />}

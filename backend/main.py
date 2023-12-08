@@ -58,6 +58,13 @@ async def get_sagittal_img(y):
 async def get_coronal_img(x):
     mpr = get_MPR_instance()
     return await get_image(mpr.get_coronal(int(x)))
+
+@app.get("/rotate_z/{degree}")
+async def rotate_img(degree):
+    mpr = get_MPR_instance()
+    mpr.rotate_z(int(degree))
+
+    return "Rotated!"
     
 
 

@@ -15,7 +15,6 @@ git clone https://github.com/godwindk3/Parallel.git
 
 ### 2.Install packages
 ## Back-End
-- Truy cập vào thư mục: “..\dicom_loader\Parallel\backend”
 - Dùng lệnh
 ```
 pip install -r requirement.txt

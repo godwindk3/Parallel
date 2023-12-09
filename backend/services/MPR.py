@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import pydicom as dicom
 import numpy as np
 import os
+import json
 
 
 load_dotenv()
@@ -45,9 +46,24 @@ class MPR:
             rotate_tool = RotateTool(self.images[:, :, i])
             # self.images[:, :, i] = rotate_tool.set_degree(degree).rotate_img()
             result.append(rotate_tool.set_degree(degree).rotate_img())
-  
-        
+
         self.images = np.stack(result, axis=-1)
+
+    def get_mpr_size(self):
+        return self.size
+    
+    def get_info(self):
+        data = ["PatientName", "PatientID", "Modality", "Rows", "Columns", "PixelSpacing"]
+        dict = {}
+        for item in data:
+            if (item == "PatientName"):
+                dict[item] = str(self.data[0][item].value)
+                continue
+            elif (item == "PixelSpacing"):
+                dict[item] = list(self.data[0][item].value) 
+                continue
+            dict[item] = self.data[0][item].value
+        return dict
 
 
 class RotateTool:
@@ -63,11 +79,11 @@ class RotateTool:
         cos_theta = np.cos(theta)
 
         return np.array([[cos_theta, -sin_theta], [sin_theta, cos_theta]])
-    
+
     def set_degree(self, deg):
         self.degree = deg
         return self
-    
+
     def __get_rotated_shape(self):
         h_height = self.img.shape[0]//2
         h_width = self.img.shape[1]//2
@@ -78,12 +94,12 @@ class RotateTool:
         r_width = int(max(abs(new_corners[1]))) * 2
 
         return (r_height, r_width)
-    
+
     def rotate_img(self):
         h_width = self.img.shape[1]//2
         h_height = self.img.shape[0]//2
         hr_height = self.r_height//2
-        hr_width = self.r_width//2        
+        hr_width = self.r_width//2
 
         r_img = np.zeros((self.r_height, self.r_width))
         ids = np.indices(r_img.shape)
@@ -94,17 +110,19 @@ class RotateTool:
         yr_c_ids = yr_ids - hr_height
         xr_c_ids = xr_ids - hr_width
 
-        xc, yc = (self.__rotation_mat(-self.degree)@np.row_stack((xr_c_ids, yr_c_ids))).astype(np.int32)
-        
+        xc, yc = (self.__rotation_mat(-self.degree) @
+                  np.row_stack((xr_c_ids, yr_c_ids))).astype(np.int32)
+
         x = xc + h_width
         y = yc + h_height
 
         bool_arr = np.logical_and(np.abs(xc) < h_width, np.abs(yc) < h_height)
 
-        r_img[yr_ids[bool_arr], xr_ids[bool_arr]] = self.img[y[bool_arr], x[bool_arr]]
+        r_img[yr_ids[bool_arr], xr_ids[bool_arr]
+              ] = self.img[y[bool_arr], x[bool_arr]]
 
         return r_img
-    
+
 
 def get_MPR_instance(path_to_dicom_file=PATH):
     global mpr_instance
@@ -127,22 +145,13 @@ def load_dicoms(path):
     return dcm_files
 
 
-# def main():
-#     import matplotlib.pyplot as plt
 
-#     dicom = get_MPR_instance()
-#     # dicom.rotate_z(30)
-#     axial = plt.subplot(1, 3, 1)
+def main():
+    import matplotlib.pyplot as plt
 
-#     r_tool1 = get_rotate_tool(dicom.get_axial(150), 30)
-
-#     plt.imshow(r_tool1.rotate_img())
-#     sagittal = plt.subplot(1, 3, 2)
-
-#     r_tool2 = get_rotate_tool(dicom.get_axial(1), 30)
-#     plt.imshow(r_tool2.rotate_img())
-#     plt.show()
+    dicom = get_MPR_instance()
+    print(dicom.get_info())
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()

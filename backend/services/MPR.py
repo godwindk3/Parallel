@@ -2,15 +2,13 @@ from dotenv import load_dotenv
 import pydicom as dicom
 import numpy as np
 import os
-import json
 
 
 load_dotenv()
 PATH = os.getenv("DICOMS_PATH")
 
-mpr_instance = None
 
-# singleton pattern
+mpr_instance = None
 
 
 class MPR:
@@ -51,16 +49,17 @@ class MPR:
 
     def get_mpr_size(self):
         return self.size
-    
+
     def get_info(self):
-        data = ["PatientName", "PatientID", "Modality", "Rows", "Columns", "PixelSpacing"]
+        data = ["PatientName", "PatientSex",  "PatientID",
+                "Modality", "Rows", "Columns", "PixelSpacing"]
         dict = {}
         for item in data:
             if (item == "PatientName"):
                 dict[item] = str(self.data[0][item].value)
                 continue
             elif (item == "PixelSpacing"):
-                dict[item] = list(self.data[0][item].value) 
+                dict[item] = list(self.data[0][item].value)
                 continue
             dict[item] = self.data[0][item].value
         return dict
@@ -144,14 +143,3 @@ def load_dicoms(path):
         dcm_files, key=lambda file: file.ImagePositionPatient[2])
     return dcm_files
 
-
-
-def main():
-    import matplotlib.pyplot as plt
-
-    dicom = get_MPR_instance()
-    print(dicom.get_info())
-
-
-if __name__ == "__main__":
-    main()

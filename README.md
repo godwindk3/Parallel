@@ -14,7 +14,8 @@ git clone https://github.com/godwindk3/Parallel.git
 ```
 
 ### 2.Install packages
-## Back-End
+## Back-End:
+- Truy cập vào thư mục: “..\dicom_loader\Parallel\backend”
 - Dùng lệnh
 ```
 pip install -r requirement.txt
@@ -32,12 +33,11 @@ npm install
 
 
  ![image](https://github.com/hausura/show_read_me/blob/main/4.png)
-- Lựa chọn port trống để chạy sever:
+- Lựa chọn port trống để chạy sever
 - Dán đường dẫn của 1 trong các folder chứa các file DICOM(ở trong backend/data) hoặc data tự chọn
-- rename user.env => .env
 
 ## How to use 
-### 1.Cách chạy:
+### 1.Cách chạy
 ###### Đồng thời tạo 2 terminal trong VsCode:
 - Terminal đầu tiên chạy front-end:
 ```
@@ -57,19 +57,24 @@ uvicorn main:app –reload
 ```
 ### 2.Hiển thị ảnh MPR
 - Trang sẽ hiển thị ảnh theo 3 hướng Coronal,Axial,Sagital
-- Thanh kéo Adjust để xem các lớp ảnh theo từng hướng nhìn
+- Thanh kéo Adjust để xem các lớp ảnh theo từng hướng nhìn:
 
  ![image](https://github.com/hausura/show_read_me/blob/main/1.png)
 
  ### 3.Xoay ảnh
-- Nhập số độ muốn xoay vào và ấn Fetch Data để hiển thị ảnh sau 
-	khi xoay
+- Nhập số độ muốn xoay vào và ấn Fetch Data để hiển thị ảnh sau khi xoay:
 
- ![image](https://github.com/hausura/show_read_me/blob/main/2.png)
+ ![image](https://github.com/hausura/show_read_me/blob/main/5.png)
 
  - Kết quả sau khi xoay 3 ảnh sẽ được hiển thị thay thế các ảnh MPR cũ:
  
  ![image](https://github.com/hausura/show_read_me/blob/main/3.png)
+
+ ### 4.Hiển thị thông tin bệnh nhân
+ - Thông tin bệnh nhân bao gồm:
+
+ ![image](https://github.com/hausura/show_read_me/blob/main/6.png)
+
 
 
 

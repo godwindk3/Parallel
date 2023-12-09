@@ -59,7 +59,7 @@ import ImageFetcher from './mprComponents/ImageFetcher';
 import AxialImageFetcher from './mprComponents/AxialImageFetcher';
 import SagittalImageFetcher from './mprComponents/SagittalImageFetcher';
 import DynamicDataFetcher from './mprComponents/DynamicDataFetcher';
-
+import PatientInfoFetcher from './mprComponents/PatientInfoFetcher';
 function App() {
   const [dataChanged, setDataChanged] = useState(false);
 
@@ -72,6 +72,7 @@ function App() {
       <Header />
       <About />
       <Portfolio />
+      <PatientInfoFetcher />
       <div className='app-container'>
         <ImageFetcher dataChanged={dataChanged} />
         <AxialImageFetcher dataChanged={dataChanged} />

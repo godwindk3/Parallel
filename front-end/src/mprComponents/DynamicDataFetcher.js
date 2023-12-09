@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './DynamicDataFetcher.css'
 
 // const DynamicDataFetcher = () => {
 //     const [degree, setDegree] = useState(0); // Default degree is set to 0
@@ -82,7 +83,7 @@ const DynamicDataFetcher = ({ onDataChanged }) => {
   };
 
   return (
-    <div>
+    <div className='rotate'>
       <h1>ROTATE:</h1>
       <p>{apiResponse}</p>
 
@@ -97,7 +98,8 @@ const DynamicDataFetcher = ({ onDataChanged }) => {
             onChange={handleDegreeChange}
           />
         </label>
-        <button type="submit">Fetch Data</button>
+        <br />
+        <button type="submit" style={{color: 'white', border : '2px' , borderStyle : 'dashed'}}>Rotate</button>
       </form>
     </div>
   );

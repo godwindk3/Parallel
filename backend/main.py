@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Response
+from fastapi.responses import JSONResponse
 import numpy as np
 from PIL import Image
 import pydicom
@@ -7,6 +8,7 @@ import uvicorn
 from dotenv import load_dotenv
 import os
 from services.MPR import get_MPR_instance
+
 
 app = FastAPI()
 load_dotenv()
@@ -65,7 +67,21 @@ async def rotate_img(degree):
     mpr.rotate_z(int(degree))
 
     return "Rotated!"
-    
+
+@app.get("/size")
+async def get_mpr_size():
+    mpr = get_MPR_instance()
+    size = mpr.get_mpr_size()
+    return {
+        "x" : size[0],
+        "y" : size[1],
+        "z" : size[2]
+    }
+
+@app.get("/get_info")
+async def get_pat_data():
+    mpr = get_MPR_instance()
+    return JSONResponse(mpr.get_info())
 
 
 def main():

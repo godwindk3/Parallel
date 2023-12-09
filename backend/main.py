@@ -14,6 +14,9 @@ app = FastAPI()
 load_dotenv()
 PORT = int(os.getenv("PORT"))
 
+mpr = get_MPR_instance()
+original_img = mpr.images
+
 @app.get("/")
 def hello_world():
     return "Hello World"
@@ -48,29 +51,32 @@ async def get_image(data):
 
 @app.get("/axial/{z}")
 async def get_axial_img(z):
-    mpr = get_MPR_instance()
+    # mpr = get_MPR_instance()
     return await get_image(mpr.get_axial(int(z)))
 
 @app.get("/sagittal/{y}")
 async def get_sagittal_img(y):
-    mpr = get_MPR_instance()
+    # mpr = get_MPR_instance()
     return await get_image(mpr.get_sagittal(int(y)))
 
 @app.get("/coronal/{x}")
 async def get_coronal_img(x):
-    mpr = get_MPR_instance()
+    # mpr = get_MPR_instance()
     return await get_image(mpr.get_coronal(int(x)))
 
 @app.get("/rotate_z/{degree}")
-async def rotate_img(degree):
-    mpr = get_MPR_instance()
+async def rotate_img(degree=0):
+    # mpr = get_MPR_instance()
+    mpr.images = original_img
+    if (degree == 0):
+        return "Rotated!"
     mpr.rotate_z(int(degree))
 
     return "Rotated!"
 
 @app.get("/size")
 async def get_mpr_size():
-    mpr = get_MPR_instance()
+    # mpr = get_MPR_instance()
     size = mpr.get_mpr_size()
     return {
         "x" : size[0],
@@ -80,7 +86,7 @@ async def get_mpr_size():
 
 @app.get("/get_info")
 async def get_pat_data():
-    mpr = get_MPR_instance()
+    # mpr = get_MPR_instance()
     return JSONResponse(mpr.get_info())
 
 

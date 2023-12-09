@@ -1,0 +1,13 @@
+
+.patient-infor{
+    background-color: var(--clr-dark);
+    border: 1px;
+    color: white;
+    border-style: dashed;
+    padding: auto;
+    text-align: center;
+}
+td{
+    padding: 10px;
+    text-align: center;
+}

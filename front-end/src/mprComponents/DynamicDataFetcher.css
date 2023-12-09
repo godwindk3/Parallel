@@ -1,0 +1,6 @@
+.rotate{
+    background-color: var(--clr-dark);
+    color: white;
+    text-align: center;
+    border: 1px dashed;
+}

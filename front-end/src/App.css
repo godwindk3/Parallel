@@ -266,5 +266,8 @@ input, textarea, select{
   flex: 1;
   background-color: var(--clr-dark);
   height: 100vh;
+  border: 1px;
+  border-style: dashed;
+  border-color: white;
 }
 

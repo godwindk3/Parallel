@@ -1,4 +1,5 @@
 # Simple MPR
+ ![image](https://github.com/hausura/show_read_me/blob/main/Dicom.png)
 
 ## Introduction
 - Môn: **Parallel Computing** 

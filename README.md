@@ -36,6 +36,7 @@ npm install
  ![image](https://github.com/hausura/show_read_me/blob/main/4.png)
 - Lựa chọn port trống để chạy sever
 - Dán đường dẫn của 1 trong các folder chứa các file DICOM(ở trong backend/data) hoặc data tự chọn
+- Đổi tên user.env thành .env
 
 ## II. How to use 
 ### 1.Cách chạy

@@ -1,0 +1,49 @@
+CPU: Intel® Core™ i5-1035G1 (4 cores, 8 threads)
+rotate parallel (hasura):
+Current degree:  25
+non parallel:  13.009480714797974
+parallel:  10.05118441581726
+Current degree:  35
+non parallel:  43.47747850418091
+parallel:  7.46287989616394
+Current degree:  45
+non parallel:  12.966281414031982
+parallel:  6.133805513381958
+Current degree:  55
+non parallel:  10.32056713104248
+parallel:  5.59086012840271
+Current degree:  65
+non parallel:  10.4826180934906
+parallel:  6.2418053150177
+Current degree:  75
+non parallel:  10.327131986618042
+parallel:  6.664425373077393
+Current degree:  85
+non parallel:  11.702835083007812
+parallel:  7.115547180175781
+Current degree:  95
+non parallel:  12.77901291847229
+parallel:  6.560644626617432
+Current degree:  105
+non parallel:  9.160760879516602
+parallel:  5.600813627243042
+Current degree:  115
+non parallel:  8.075611114501953
+parallel:  5.195465087890625
+Current degree:  125
+non parallel:  13.011640071868896
+parallel:  5.492507219314575
+Current degree:  135
+non parallel:  10.07511043548584
+parallel:  5.624273061752319
+Current degree:  145
+non parallel:  12.753237009048462
+parallel:  5.646246910095215
+Current degree:  155
+non parallel:  8.32873249053955
+parallel:  4.778142929077148
+Current degree:  165
+non parallel:  6.360270738601685
+parallel:  4.95758581161499
+avg non parallel:  12.855384572347004
+avg parallel:  6.207745806376139

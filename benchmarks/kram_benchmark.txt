@@ -1,0 +1,49 @@
+CPU: AMD Ryzen 5 5600H (6 cores, 12 threads)
+rotate parallel (Kram):
+Current degree:  25
+non parallel:  4.315381288528442
+parallel:  2.1309943199157715
+Current degree:  35
+non parallel:  4.08649468421936
+parallel:  1.9988837242126465
+Current degree:  45
+non parallel:  3.878331184387207
+parallel:  1.9826323986053467
+Current degree:  55
+non parallel:  3.767958879470825
+parallel:  1.993462324142456
+Current degree:  65
+non parallel:  4.325540542602539
+parallel:  2.014838218688965
+Current degree:  75
+non parallel:  4.323912143707275
+parallel:  2.0690643787384033
+Current degree:  85
+non parallel:  4.337416887283325
+parallel:  2.083185911178589
+Current degree:  95
+non parallel:  3.8169262409210205
+parallel:  2.1151530742645264
+Current degree:  105
+non parallel:  3.7045774459838867
+parallel:  2.214616060256958
+Current degree:  115
+non parallel:  3.816331386566162
+parallel:  2.055586576461792
+Current degree:  125
+non parallel:  4.289106845855713
+parallel:  2.066927433013916
+Current degree:  135
+non parallel:  3.972742795944214
+parallel:  1.9950590133666992
+Current degree:  145
+non parallel:  3.791261911392212
+parallel:  2.019242286682129
+Current degree:  155
+non parallel:  4.293473720550537
+parallel:  2.0355429649353027
+Current degree:  165
+non parallel:  4.398155927658081
+parallel:  2.0895941257476807
+avg non parallel:  4.07450745900472
+avg parallel:  2.0576521873474123

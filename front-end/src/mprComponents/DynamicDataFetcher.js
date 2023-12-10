@@ -36,11 +36,11 @@ const DynamicDataFetcher = ({ onDataChanged }) => {
 
       <form onSubmit={handleSubmit}>
         <label>
-          Choose Degree (0-180):
+          Choose Degree (0-360):
           <input
             type="number"
-            min="-180"
-            max="180"
+            min="0"
+            max="360"
             value={degree}
             onChange={handleDegreeChange}
           />

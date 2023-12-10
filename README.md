@@ -6,7 +6,7 @@
 - Trường: [Đại học Khoa học Tự nhiên, Đại học Quốc gia Hà Nội](http://hus.vnu.edu.vn/)
 
 
-## How to set up
+## I. How to set up
 ### 1. Clone master brand
 
 ```
@@ -14,7 +14,7 @@ git clone https://github.com/godwindk3/Parallel.git
 ```
 
 ### 2.Install packages
-## Back-End:
+#### Back-End:
 - Truy cập vào thư mục: “..\dicom_loader\Parallel\backend”
 - Dùng lệnh
 ```
@@ -22,7 +22,7 @@ pip install -r requirement.txt
 ```
 ###### (file requirement.txt chứa các thư viện cần thiết bao gồm: fastapi, numpy, Pillow, pydicom, uvicorn, python, pyton.dotenv)
 
-## Front-End:
+#### Front-End:
 - Truy cập vào thư mục: “..\dicom_loader\Parallel\front-end”
 - Dùng lệnh
 ```
@@ -36,7 +36,7 @@ npm install
 - Lựa chọn port trống để chạy sever
 - Dán đường dẫn của 1 trong các folder chứa các file DICOM(ở trong backend/data) hoặc data tự chọn
 
-## How to use 
+## II. How to use 
 ### 1.Cách chạy
 ###### Đồng thời tạo 2 terminal trong VsCode:
 - Terminal đầu tiên chạy front-end:

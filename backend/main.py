@@ -70,7 +70,7 @@ async def rotate_img(degree=0):
     mpr.images = original_img
     if (degree == 0):
         return "Rotated!"
-    mpr.rotate_z(int(degree))
+    mpr.rotate_z_parallel(int(degree))
 
     return "Rotated!"
 

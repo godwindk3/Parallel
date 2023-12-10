@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import pydicom as dicom
 import numpy as np
 import os
+from concurrent.futures import ThreadPoolExecutor
 
 
 load_dotenv()
@@ -46,6 +47,19 @@ class MPR:
             result.append(rotate_tool.set_degree(degree).rotate_img())
 
         self.images = np.stack(result, axis=-1)
+        
+    def rotate_z_parallel(self, degree):
+        result = []
+
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(self._rotate_single_slice, degree, i) for i in range(self.size[2])]
+            result = [future.result() for future in futures]
+
+        self.images = np.stack(result, axis=-1)
+
+    def _rotate_single_slice(self, degree, index):
+        rotate_tool = RotateTool(self.images[:, :, index])
+        return rotate_tool.set_degree(degree).rotate_img()
 
     def get_mpr_size(self):
         return self.size

@@ -1,0 +1,49 @@
+CPU: AMD Ryzen 5 5500U (6 Cores, 12 Threads)
+rotate parallel (anbish):
+Current degree:  25
+non parallel:  6.550146818161011
+parallel:  3.4423108100891113
+Current degree:  35
+non parallel:  6.840550422668457
+parallel:  3.4476377964019775
+Current degree:  45
+non parallel:  6.7226715087890625
+parallel:  3.3856725692749023
+Current degree:  55
+non parallel:  6.4960362911224365
+parallel:  3.526517629623413
+Current degree:  65
+non parallel:  6.510040283203125
+parallel:  3.609121084213257
+Current degree:  75
+non parallel:  6.426604986190796
+parallel:  3.6292991638183594
+Current degree:  85
+non parallel:  7.028038501739502
+parallel:  3.653350353240967
+Current degree:  95
+non parallel:  7.062794208526611
+parallel:  3.660822629928589
+Current degree:  105
+non parallel:  6.758414268493652
+parallel:  3.5615789890289307
+Current degree:  115
+non parallel:  6.658001661300659
+parallel:  3.553734064102173
+Current degree:  125
+non parallel:  6.571095705032349
+parallel:  3.487783670425415
+Current degree:  135
+non parallel:  6.569808721542358
+parallel:  3.529792547225952
+Current degree:  145
+non parallel:  6.902310371398926
+parallel:  3.5918047428131104
+Current degree:  155
+non parallel:  6.792547225952148
+parallel:  3.511852741241455
+Current degree:  165
+non parallel:  6.773229360580444
+parallel:  3.8939030170440674
+avg non parallel:  6.710819355646769
+avg parallel:  3.5656787872314455

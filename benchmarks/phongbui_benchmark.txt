@@ -1,0 +1,49 @@
+CPU: AMD Ryzen 5 4500U (6 cores, 6 threads)
+rotate parallel (phongbui):
+Current degree:  25
+non parallel:  4.075670957565308
+parallel:  2.2810428142547607
+Current degree:  35
+non parallel:  4.222013235092163
+parallel:  2.2602181434631348
+Current degree:  45
+non parallel:  4.621291399002075
+parallel:  2.1394994258880615
+Current degree:  55
+non parallel:  4.178632736206055
+parallel:  2.174639940261841
+Current degree:  65
+non parallel:  4.2888665199279785
+parallel:  2.1806588172912598
+Current degree:  75
+non parallel:  4.381623268127441
+parallel:  2.189300537109375
+Current degree:  85
+non parallel:  4.462606430053711
+parallel:  2.285000801086426
+Current degree:  95
+non parallel:  4.4747090339660645
+parallel:  2.198091983795166
+Current degree:  105
+non parallel:  4.357081651687622
+parallel:  2.1943178176879883
+Current degree:  115
+non parallel:  4.258481740951538
+parallel:  2.1844394207000732
+Current degree:  125
+non parallel:  4.183412551879883
+parallel:  2.2277579307556152
+Current degree:  135
+non parallel:  4.159546613693237
+parallel:  2.1486897468566895
+Current degree:  145
+non parallel:  4.202462196350098
+parallel:  2.14260196685791
+Current degree:  155
+non parallel:  4.260528564453125
+parallel:  2.1846516132354736
+Current degree:  165
+non parallel:  4.306938171386719
+parallel:  2.262227773666382
+avg non parallel:  4.295591004689535
+avg parallel:  2.2035425821940104

@@ -1,0 +1,49 @@
+CPU: AMD Ryzen 5 7535HS (6 cores, 12 threads)
+Rotate parallel (nothingmore): 
+Current degree:  25
+non parallel:  5.554750442504883
+parallel:  2.1678781509399414
+Current degree:  35
+non parallel:  4.809345483779907
+parallel:  2.0001981258392334
+Current degree:  45
+non parallel:  4.500346422195435
+parallel:  1.9132356643676758
+Current degree:  55
+non parallel:  4.37516713142395
+parallel:  2.179791212081909
+Current degree:  65
+non parallel:  5.477800607681274
+parallel:  2.5940616130828857
+Current degree:  75
+non parallel:  5.179548263549805
+parallel:  2.131300210952759
+Current degree:  85
+non parallel:  4.883816957473755
+parallel:  2.0813751220703125
+Current degree:  95
+non parallel:  4.4030256271362305
+parallel:  2.097283363342285
+Current degree:  105
+non parallel:  4.043828010559082
+parallel:  1.967362642288208
+Current degree:  115
+non parallel:  4.338446855545044
+parallel:  2.1450161933898926
+Current degree:  125
+non parallel:  4.789791584014893
+parallel:  2.1383631229400635
+Current degree:  135
+non parallel:  4.546164035797119
+parallel:  2.0742557048797607
+Current degree:  145
+non parallel:  4.316507339477539
+parallel:  2.118945837020874
+Current degree:  155
+non parallel:  4.978338718414307
+parallel:  2.1881096363067627
+Current degree:  165
+non parallel:  4.905863523483276
+parallel:  2.1052427291870117
+avg non parallel:  4.740182733535766
+avg parallel:  2.1268279552459717

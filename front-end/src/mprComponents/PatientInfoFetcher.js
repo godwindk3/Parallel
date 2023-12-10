@@ -33,6 +33,10 @@ const PatientInfoFetcher = () => {
               <td>{patientInfo.PatientName}</td>
             </tr>
             <tr>
+              <td>Gender :</td>
+              <td>{patientInfo.PatientSex}</td>
+            </tr>
+            <tr>
               <td>Patient ID:</td>
               <td>{patientInfo.PatientID}</td>
             </tr>

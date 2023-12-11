@@ -16,13 +16,13 @@ git clone https://github.com/godwindk3/Parallel.git
 
 ### 2.Install packages
 #### Back-End:
-- Truy cập vào thư mục: “..\dicom_loader\Parallel\backend”
+- Truy cập vào thư mục: “..\dicom_loader\Parallel”
 - Dùng lệnh
 ```
 pip install -r requirement.txt
 ```
 ###### (file requirement.txt chứa các thư viện cần thiết bao gồm: fastapi, numpy, Pillow, pydicom, uvicorn, python, pyton.dotenv)
-
+#### Trong trường hợp không cài được lệnh trên, có thể cài lần lượt các thư viện: fastapi, numpy, Pillow, pydicom, uvicorn, python, pyton.dotenv
 #### Front-End:
 - Truy cập vào thư mục: “..\dicom_loader\Parallel\front-end”
 - Dùng lệnh
